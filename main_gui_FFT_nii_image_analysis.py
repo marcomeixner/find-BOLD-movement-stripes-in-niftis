@@ -262,7 +262,7 @@ slice_idx_entry.insert(0, last_inputs.get("slice_idx_entry", "40"))  # Default v
 tk.Label(root, text="Periodicity:").grid(row=3, column=0, padx=10, pady=5, sticky="w")
 periodicity_entry = tk.Entry(root, width=10)
 periodicity_entry.grid(row=3, column=1, sticky="w", padx=10, pady=5)
-periodicity_entry.insert(0, last_inputs.get("periodicity", "1"))  # Default value
+periodicity_entry.insert(0, last_inputs.get("periodicity", "2"))  # Default value
 
 # Std factor
 tk.Label(root, text="Std Factor:").grid(row=4, column=0, padx=10, pady=5, sticky="w")
