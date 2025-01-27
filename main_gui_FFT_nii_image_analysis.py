@@ -240,11 +240,11 @@ last_inputs = load_last_inputs()
 root = tk.Tk()
 root.title("Find line artefact in nii file")
 
-# Input folder
+# Input file
 tk.Label(root, text="Input nii-File:").grid(row=0, column=0, padx=10, pady=5, sticky="w")
 inputNii_file = tk.StringVar(value=last_inputs.get("inputNii_file", ""))     # use double backslash \\ for defaut path 
 tk.Entry(root, textvariable=inputNii_file, width=50).grid(row=0, column=1, padx=10, pady=5)
-tk.Button(root, text="Browse", command=lambda: inputNii_file.set(filedialog.askdirectory())).grid(row=0, column=2, padx=10, pady=5)
+tk.Button(root, text="Browse", command=lambda: inputNii_file.set(filedialog.askopenfilename(filetypes=[("NIfTI files", "*.nii")]))).grid(row=0, column=2, padx=10, pady=5)
 
 # Output folder
 tk.Label(root, text="Output Folder:").grid(row=1, column=0, padx=10, pady=5, sticky="w")
